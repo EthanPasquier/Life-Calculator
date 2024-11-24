@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Calculator - Prédis ta mort!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="pixel-title">Life Calculator</h1>
+        <div class="game-box">
+            <form id="life-form" onsubmit="return false;">
+                <div class="age-input-group">
+                    <label>Quel âge as-tu actuellement? 🎂</label>
+                    <input type="number" name="currentAge" min="1" max="120" required placeholder="Entre ton âge...">
+                </div>
+
+                <div class="questions">
+                    <h2 class="category-title">🌟 Basics de survie</h2>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="smoke">
+                            Je fume comme un pompier 🚬
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="drink">
+                            Mon foie est un vétéran de guerre 🍺
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="sport">
+                            Je cours plus vite que mes problèmes 🏃
+                        </label>
+                    </div>
+
+                    <h2 class="category-title">🎲 Facteurs WTF</h2>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="alien">
+                            J'ai déjà été enlevé par des aliens 👽
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="conspiracy">
+                            Je crois que la Terre est un donut 🍩
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="catLord">
+                            Mon chat me regarde dormir la nuit 😺
+                        </label>
+                    </div>
+
+                    <h2 class="category-title">🎭 Mode de vie</h2>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="pizza">
+                            Je mange de l'ananas sur ma pizza 🍍
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="socks">
+                            Je porte des chaussettes dans mes sandales 🧦
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="karen">
+                            Je demande toujours à voir le manager 😤
+                        </label>
+                    </div>
+
+                    <h2 class="category-title">🎪 Facteurs de risque</h2>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="yolo">
+                            YOLO est ma devise quotidienne 🎢
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="tiktok">
+                            Je fais tous les défis TikTok 📱
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="games">
+                            Je dis "ez" après chaque partie 🎮
+                        </label>
+                    </div>
+
+                    <h2 class="category-title">🌈 Bonus de survie</h2>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="nokia">
+                            Je possède encore un Nokia 3310 📱
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="matrix">
+                            Je prends la pilule rouge ET bleue 💊
+                        </label>
+                    </div>
+                    <div class="question-group">
+                        <label>
+                            <input type="checkbox" name="chuck">
+                            Chuck Norris est mon parrain 👊
+                        </label>
+                    </div>
+                </div>
+                <button type="button" onclick="document.dispatchEvent(new Event('submitForm'))" class="pixel-button">Révèle mon destin! ⚡</button>
+            </form>
+        </div>
+        <div id="result" class="result-hidden">
+            <div class="countdown">
+                <h2>Il te reste...</h2>
+                <div id="time-left" class="time-display">??</div>
+                <div id="death-type" class="death-message"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
